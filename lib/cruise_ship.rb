@@ -1,4 +1,4 @@
-# passengers = {
+# passengerss = {
 # suite_a: "Amanda Presley", 
 # suite_b: "Seymour Hoffman", 
 # suite_c: "Alfred Tennyson", 
@@ -7,5 +7,11 @@
 # }
 
 def select_winner(passengers)
-  # add the code snippet here!
+  winner = nil
+  passengers.find do |suite, name| 
+    if suite === :suite_a && name[0] === 'A'
+      winner = name
+    end
+  end
+    winner
 end
